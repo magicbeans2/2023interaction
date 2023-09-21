@@ -1,9 +1,9 @@
+PImage img;
 void setup(){
-  size(500,500);
-  background(255);
+  size(600,600);
+  img = loadImage("chair.jpg");
+  
 }
-void draw(){
-  if(mousePressed){
-    line(mouseX,mouseY,pmouseX,pmouseY);
-  }
-}
+ void draw(){
+   image(img,mouseX,mouseY,300,300);
+ }

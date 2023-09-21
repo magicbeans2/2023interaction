@@ -1,14 +1,18 @@
+PImage img,imgBox;
 void setup(){
-  size(500,500);
-  background(255);
+  size(600,600);
+  img = loadImage("pc.png");
+  imgBox = loadImage("bg.png");
+  
 }
-void draw(){
-  if(mousePressed){
-    line(mouseX,mouseY,pmouseX,pmouseY);
-  }
-}
-void keyPressed(){
-  if(key=='1') stroke(255,0,0);
-  if(key=='2') stroke(0,255,0);
-  if(key=='3') stroke(0,0,255);
-}
+ void draw(){
+   imageMode(CENTER);
+   if(mousePressed)
+   {
+    image(imgBox,mouseX,mouseY);
+   }
+   else
+   {
+     image(img,300,300,220,300);
+   }
+ }
